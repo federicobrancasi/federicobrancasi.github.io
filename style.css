@@ -78,7 +78,7 @@ button {
     color: #141c3a;
   }
   p {
-    font-size: 22px;
+    font-size: 14px;
     width: 60%;
     text-align: center;
     font-weight: 400;
@@ -92,7 +92,7 @@ button {
     transition-duration: 5s;
     background: #fd4d3f;
     border-radius: 100px;
-    bottom: 270px;
+    bottom: 100px;
     left: 30.8%;
     position: absolute;
     transition-property: bottom;
