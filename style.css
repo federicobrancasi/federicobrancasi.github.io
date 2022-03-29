@@ -76,9 +76,6 @@ button {
     margin-bottom: 20px;
     margin-top: 15px;
     color: #141c3a;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
   }
   p {
@@ -89,9 +86,6 @@ button {
     margin: 0 auto;
     margin-bottom: 40px;
     color: white;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
   }
   #float-circle {
