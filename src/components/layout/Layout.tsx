@@ -21,7 +21,7 @@ export const Layout: React.FC<LayoutProps> = ({
       >
         {showParticles && <FloatingParticles />}
         
-        <div className="min-h-screen flex items-center justify-center px-4 py-8 sm:px-6 md:px-8 lg:px-12 relative">
+        <div className="min-h-screen flex items-start sm:items-center justify-center px-4 pt-28 pb-4 sm:py-8 sm:px-6 md:px-8 lg:px-12 relative">
           <div className="text-center max-w-xs sm:max-w-sm md:max-w-2xl lg:max-w-4xl mx-auto relative w-full">
             {children}
           </div>
