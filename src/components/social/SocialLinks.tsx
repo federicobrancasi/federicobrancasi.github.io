@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Github, Linkedin, Mail, Download } from 'lucide-react';
+import { Github, Linkedin, Mail, Download, Film } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { SOCIAL_LINKS } from '@/constants';
 import { createAnimationProps, createInitialProps, getAnimationDelay } from '@/utils/animations';
@@ -54,27 +54,45 @@ export const SocialLinks: React.FC = () => {
         })}
       </div>
 
-      {/* CV Download Button */}
+      {/* CV Download and Movie Recommendation Buttons */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: getAnimationDelay(6) }}
+        className="flex flex-col items-center gap-3"
       >
-        <Button
-          variant="outline"
-          size="lg"
-          asChild
-          className="gap-2 bg-portfolio-primary/10 border-portfolio-primary/30 hover:bg-portfolio-primary/20 hover:border-portfolio-primary/50 transition-colors touch-manipulation text-sm sm:text-base px-4 sm:px-6 py-2 sm:py-3"
-        >
-          <a
-            href="/Federico_Brancasi_Resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
+        <div className="flex flex-col sm:flex-row items-center gap-20 sm:gap-4">
+          <Button
+            variant="outline"
+            size="lg"
+            asChild
+            className="gap-2 bg-portfolio-primary/10 border-portfolio-primary/30 hover:bg-portfolio-primary/20 hover:border-portfolio-primary/50 transition-colors touch-manipulation text-sm sm:text-base px-4 sm:px-6 py-2 sm:py-3"
           >
-            <Download className="w-4 h-4" />
-            Download CV
-          </a>
-        </Button>
+            <a
+              href="/Federico_Brancasi_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Download className="w-4 h-4" />
+              Download CV
+            </a>
+          </Button>
+          
+          <div className="relative">
+            <Button
+              variant="outline"
+              size="lg"
+              asChild
+              className="gap-2 bg-portfolio-primary/10 border-portfolio-primary/30 hover:bg-portfolio-primary/20 hover:border-portfolio-primary/50 transition-colors touch-manipulation text-sm sm:text-base px-4 sm:px-6 py-2 sm:py-3"
+            >
+              <a href="/movies">
+                <Film className="w-4 h-4" />
+                Movie Picks
+              </a>
+            </Button>
+            <p className="text-xs text-portfolio-muted absolute top-full mt-2 left-1/2 transform -translate-x-1/2 whitespace-nowrap">(Since I am a big Cinephile)</p>
+          </div>
+        </div>
       </motion.div>
     </motion.div>
   );

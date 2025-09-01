@@ -53,5 +53,6 @@ export const ANIMATION_CONFIG: Record<string, AnimationConfig> = {
 
 export const ROUTES = {
   HOME: '/',
+  MOVIES: '/movies',
   NOT_FOUND: '*'
 } as const;
