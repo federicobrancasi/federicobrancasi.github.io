@@ -68,7 +68,6 @@ export const SocialLinks: React.FC = () => {
         >
           <a
             href="/Federico_Brancasi_Resume.pdf"
-            download="Federico_Brancasi_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
