@@ -22,7 +22,7 @@ const MOVIES = [
   {
     id: 3,
     title: '2001: A Space Odyssey',
-    poster: '/movies/2001- A Space Odyssey.jpg',
+    poster: '/movies/2001 - A Space Odyssey.jpg',
     description: "Kubrick's groundbreaking sci-fi epic exploring human evolution, artificial intelligence, and our place in the universe."
   },
   {
@@ -430,7 +430,7 @@ const MOVIES = [
   {
     id: 71,
     title: 'Léon: The Professional',
-    poster: '/movies/Léon - The Professional.jpg',
+    poster: '/movies/Leon - The Professional.jpg',
     description: 'Luc Besson\'s stylish action thriller about an unlikely bond between a hitman and a young girl.'
   },
   {
@@ -689,10 +689,25 @@ const MOVIES = [
 
 const Movies: React.FC = () => {
   const [currentMovie, setCurrentMovie] = useState(MOVIES[0]);
+  const [shownMovies, setShownMovies] = useState<Set<number>>(new Set());
 
   const getRandomMovie = () => {
-    const randomIndex = Math.floor(Math.random() * MOVIES.length);
-    setCurrentMovie(MOVIES[randomIndex]);
+    // If all movies have been shown, reset the shown movies set
+    if (shownMovies.size >= MOVIES.length) {
+      setShownMovies(new Set());
+    }
+    
+    // Get movies that haven't been shown yet
+    const availableMovies = MOVIES.filter(movie => !shownMovies.has(movie.id));
+    
+    // If no available movies (shouldn't happen due to reset above), use all movies
+    const moviesToChooseFrom = availableMovies.length > 0 ? availableMovies : MOVIES;
+    
+    const randomIndex = Math.floor(Math.random() * moviesToChooseFrom.length);
+    const selectedMovie = moviesToChooseFrom[randomIndex];
+    
+    setCurrentMovie(selectedMovie);
+    setShownMovies(prev => new Set([...prev, selectedMovie.id]));
   };
 
   useEffect(() => {
