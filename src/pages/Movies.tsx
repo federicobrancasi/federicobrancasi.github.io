@@ -717,7 +717,7 @@ const Movies: React.FC = () => {
 
   return (
     <Layout showParticles={false}>
-      <div className="max-w-4xl mx-auto -mt-8 sm:mt-0">
+      <div className="max-w-4xl mx-auto -mt-4 sm:mt-0">
 
         {/* Movie Display */}
         <motion.div
@@ -725,7 +725,7 @@ const Movies: React.FC = () => {
           animate={createAnimationProps(1, getAnimationDelay(1))}
           className="flex flex-col items-center mb-2"
         >
-          <div className="relative mb-3 max-w-72 sm:max-w-sm">
+          <div className="relative mb-3 max-w-64 sm:max-w-sm">
             <img
               src={currentMovie.poster}
               alt={`${currentMovie.title} poster`}
