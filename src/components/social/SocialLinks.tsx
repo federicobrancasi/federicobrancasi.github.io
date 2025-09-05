@@ -61,7 +61,7 @@ export const SocialLinks: React.FC = () => {
         transition={{ duration: 0.5, delay: getAnimationDelay(6) }}
         className="flex flex-col items-center gap-3"
       >
-        <div className="flex flex-col sm:flex-row items-center gap-20 sm:gap-4">
+        <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-4">
           <Button
             variant="outline"
             size="lg"
