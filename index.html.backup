@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no" />
+    
+    <!-- Start Single Page Apps for GitHub Pages -->
+    <script type="text/javascript">
+      // Single Page Apps for GitHub Pages
+      (function(l) {
+        if (l.search[1] === '/' ) {
+          var decoded = l.search.slice(1).split('&').map(function(s) { 
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location))
+    </script>
+    <!-- End Single Page Apps for GitHub Pages -->
+    <title>Federico Brancasi - ML Researcher & Portfolio</title>
+    <meta name="description" content="Machine Learning Researcher." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <meta name="author" content="Federico Brancasi" />
+
+    <meta property="og:title" content="Federico's Little Website" />
+    <meta property="og:description" content="Machine Learning Researcher" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://branca.si/placeholder.svg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@federicobrancasi" />
+    <meta name="twitter:image" content="https://branca.si/placeholder.svg" />
+    <script type="module" crossorigin src="/assets/index-DEEdJ4P4.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-Bx2C62UJ.css">
+  </head>
+
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
