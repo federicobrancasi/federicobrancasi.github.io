@@ -4,8 +4,8 @@ export const PERSONAL_INFO: PersonalInfo = {
   name: 'FEDERICO BRANCASI',
   firstName: 'Federico',
   lastName: 'Brancasi',
-  title: 'Machine Learning Researcher @ CERN',
-  description: 'Currently, I\'m conducting ML research at CERN on model optimization techniques, after completing my Master\'s thesis research at ETH Zurich. I\'m on the lookout for like-minded visionaries eager to shape the future alongside me, let\'s connect:',
+  title: 'Research Engineer @ Microsoft',
+  description: 'Currently, I\'m a Research Engineer at Microsoft working on AI features for VS Code, after conducting ML research at CERN on model optimization techniques and completing my Master\'s thesis research at ETH Zurich. I\'m on the lookout for like-minded visionaries eager to shape the future alongside me, let\'s connect:',
   email: 'federicobrancasi@gmail.com',
   location: 'Milan, Italy'
 };
