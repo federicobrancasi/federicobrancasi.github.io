@@ -4,6 +4,7 @@ import { Github, Linkedin, Mail, Download, Film } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { SOCIAL_LINKS } from '@/constants';
 import { createAnimationProps, createInitialProps, getAnimationDelay } from '@/utils/animations';
+import { ResumeDialog } from '@/components/ResumeDialog';
 
 // Custom X icon component
 const XIcon = ({ className }: { className?: string }) => (
@@ -62,21 +63,16 @@ export const SocialLinks: React.FC = () => {
         className="flex flex-col items-center gap-3"
       >
         <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-4">
-          <Button
-            variant="outline"
-            size="sm"
-            asChild
-            className="gap-2 bg-portfolio-primary/10 border-portfolio-primary/30 hover:bg-portfolio-primary/20 hover:border-portfolio-primary/50 transition-colors touch-manipulation text-sm sm:text-base px-4 sm:px-5 py-2 sm:py-2.5"
-          >
-            <a
-              href="/Federico_Brancasi_Resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
+          <ResumeDialog>
+            <Button
+              variant="outline"
+              size="sm"
+              className="gap-2 bg-portfolio-primary/10 border-portfolio-primary/30 hover:bg-portfolio-primary/20 hover:border-portfolio-primary/50 transition-colors touch-manipulation text-sm sm:text-base px-4 sm:px-5 py-2 sm:py-2.5"
             >
               <Download className="w-4 h-4" />
               Download CV
-            </a>
-          </Button>
+            </Button>
+          </ResumeDialog>
           
           <div className="relative">
             <Button
