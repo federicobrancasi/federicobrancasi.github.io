@@ -2,11 +2,37 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { SocialLinks } from '@/components/social';
 import { PERSONAL_INFO } from '@/constants';
+import { SEOHead } from '@/components/SEOHead';
 import { createAnimationProps, createInitialProps, getAnimationDelay } from '@/utils/animations';
 
 export const HeroSection: React.FC = () => {
   return (
     <>
+      <SEOHead
+        title="Federico Brancasi | Software and Research Engineer in Zurich"
+        description="Federico Brancasi is an Italian software and research engineer based in Zurich, working on AI systems, developer tooling, model optimization and applied machine learning."
+        path="/"
+        structuredData={{
+          '@context': 'https://schema.org',
+          '@type': 'Person',
+          name: 'Federico Brancasi',
+          url: 'https://branca.si/',
+          image: 'https://branca.si/android-chrome-512x512.png',
+          jobTitle: 'Software Engineer and Research Engineer',
+          address: {
+            '@type': 'PostalAddress',
+            addressLocality: 'Zurich',
+            addressCountry: 'Switzerland',
+          },
+          nationality: 'Italian',
+          sameAs: [
+            'https://github.com/federicobrancasi',
+            'https://linkedin.com/in/federicobrancasi',
+            'https://x.com/brancasi',
+          ],
+        }}
+      />
+
       {/* Simple greeting and name */}
       <motion.div
         initial={createInitialProps()}
@@ -31,7 +57,7 @@ export const HeroSection: React.FC = () => {
         animate={createAnimationProps(1, getAnimationDelay(3))}
         className="text-lg sm:text-xl md:text-2xl font-medium text-portfolio-secondary mb-6 sm:mb-8"
       >
-        Machine Learning Researcher
+        {PERSONAL_INFO.title}
       </motion.h2>
       
       {/* Description */}

@@ -5,9 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && npm run deploy",
-    "build:dev": "vite build --mode development && npm run deploy",
+    "build": "vite build && npm run generate-route-entrypoints",
+    "build:dev": "vite build --mode development && npm run generate-route-entrypoints",
     "build:only": "vite build",
+    "generate-route-entrypoints": "node scripts/generate-route-entrypoints.mjs",
     "deploy": "cp -r dist/* . && (cp 404.html . 2>/dev/null || true)",
     "lint": "eslint .",
     "preview": "vite preview",

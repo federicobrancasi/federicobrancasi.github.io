@@ -1,8 +1,9 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Github, Linkedin, Mail, Download, Film } from 'lucide-react';
+import { Github, Linkedin, Mail, Download, Film, FolderOpenDot, UserRound } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { SOCIAL_LINKS } from '@/constants';
+import { ROUTES, SOCIAL_LINKS } from '@/constants';
 import { createAnimationProps, createInitialProps, getAnimationDelay } from '@/utils/animations';
 import { ResumeDialog } from '@/components/ResumeDialog';
 
@@ -73,7 +74,31 @@ export const SocialLinks: React.FC = () => {
               Download CV
             </Button>
           </ResumeDialog>
-          
+
+          <Button
+            variant="outline"
+            size="sm"
+            asChild
+            className="gap-2 bg-portfolio-primary/10 border-portfolio-primary/30 hover:bg-portfolio-primary/20 hover:border-portfolio-primary/50 transition-colors touch-manipulation text-sm sm:text-base px-4 sm:px-5 py-2 sm:py-2.5"
+          >
+            <Link to={ROUTES.ABOUT}>
+              <UserRound className="w-4 h-4" />
+              About
+            </Link>
+          </Button>
+
+          <Button
+            variant="outline"
+            size="sm"
+            asChild
+            className="gap-2 bg-portfolio-primary/10 border-portfolio-primary/30 hover:bg-portfolio-primary/20 hover:border-portfolio-primary/50 transition-colors touch-manipulation text-sm sm:text-base px-4 sm:px-5 py-2 sm:py-2.5"
+          >
+            <Link to={ROUTES.PROJECTS}>
+              <FolderOpenDot className="w-4 h-4" />
+              Projects
+            </Link>
+          </Button>
+
           <div className="relative">
             <Button
               variant="outline"

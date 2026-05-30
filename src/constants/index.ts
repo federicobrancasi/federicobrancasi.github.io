@@ -5,9 +5,9 @@ export const PERSONAL_INFO: PersonalInfo = {
   firstName: 'Federico',
   lastName: 'Brancasi',
   title: 'Research Engineer @ Microsoft',
-  description: 'Currently, I\'m a Research Engineer at Microsoft working on AI features for VS Code, after conducting ML research at CERN on model optimization techniques and completing my Master\'s thesis research at ETH Zurich. I\'m on the lookout for like-minded visionaries eager to shape the future alongside me, let\'s connect:',
+  description: 'I am an Italian software and research engineer based in Zurich. At Microsoft, I work on AI features for VS Code, including model evaluation, new model integration and the auto model router, after research work at CERN and ETH Zurich focused on model optimization, quantization and applied machine learning systems.',
   email: 'federicobrancasi@gmail.com',
-  location: 'Milan, Italy'
+  location: 'Zurich, Switzerland'
 };
 
 export const SOCIAL_LINKS: SocialLink[] = [
@@ -53,6 +53,9 @@ export const ANIMATION_CONFIG: Record<string, AnimationConfig> = {
 
 export const ROUTES = {
   HOME: '/',
+  ABOUT: '/about',
+  RESUME: '/resume',
+  PROJECTS: '/projects',
   MOVIES: '/movies',
   NOT_FOUND: '*'
 } as const;
