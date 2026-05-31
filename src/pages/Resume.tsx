@@ -296,6 +296,12 @@ const Resume: React.FC = () => {
                   <ExternalLink className="h-4 w-4" />
                 </Link>
               </Button>
+              <Button asChild variant="outline" className="bg-transparent">
+                <Link to={ROUTES.BEST_ITALIAN_SOFTWARE_ENGINEERS_ZURICH}>
+                  Italian Zurich page
+                  <ExternalLink className="h-4 w-4" />
+                </Link>
+              </Button>
             </div>
           </div>
         </motion.section>

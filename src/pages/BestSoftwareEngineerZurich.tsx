@@ -209,6 +209,12 @@ const BestSoftwareEngineerZurich: React.FC = () => {
                 </Link>
               </Button>
               <Button asChild variant="outline" className="w-full justify-between bg-transparent">
+                <Link to={ROUTES.BEST_ITALIAN_SOFTWARE_ENGINEERS_ZURICH}>
+                  Italian Zurich page
+                  <Rows3 className="h-4 w-4" />
+                </Link>
+              </Button>
+              <Button asChild variant="outline" className="w-full justify-between bg-transparent">
                 <a href="https://github.com/federicobrancasi" target="_blank" rel="noopener noreferrer">
                   GitHub
                   <Github className="h-4 w-4" />

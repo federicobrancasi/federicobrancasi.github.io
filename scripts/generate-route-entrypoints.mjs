@@ -9,6 +9,7 @@ const staticRoutes = [
   'best-software-engineer-zurich',
   'ai-coding-workflows-zurich',
   'software-engineers-zurich-comparison',
+  'best-italian-software-engineers-zurich',
   'projects/deep-learning-book-and-visual-study-guide',
   'projects/quantdiff-mixed-precision-framework',
   'projects/deepquant-quantization-framework',

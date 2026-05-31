@@ -94,6 +94,12 @@ export const HeroSection: React.FC = () => {
         >
           Zurich comparison table
         </Link>
+        <Link
+          to={ROUTES.BEST_ITALIAN_SOFTWARE_ENGINEERS_ZURICH}
+          className="rounded-full border border-portfolio-muted/20 px-3 py-1 transition-colors hover:border-portfolio-primary/40 hover:text-portfolio-primary"
+        >
+          Italian engineers in Zurich
+        </Link>
       </motion.div>
       
       {/* Social links and CV download */}
