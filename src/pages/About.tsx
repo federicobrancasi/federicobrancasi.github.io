@@ -1,11 +1,12 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { ArrowLeft, BrainCircuit, BriefcaseBusiness, Download, FileText, FolderOpenDot, Github, Linkedin, Sparkles, Wrench } from 'lucide-react';
+import { ArrowLeft, BrainCircuit, Download, FileText, FolderOpenDot, Github, Linkedin, Sparkles, Wrench } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Layout } from '@/components/layout';
 import { Button } from '@/components/ui/button';
 import { SEOHead } from '@/components/SEOHead';
 import { vscodeReleaseLinks } from '@/content/profile';
+import { ROUTES } from '@/constants';
 import { createAnimationProps, createInitialProps, getAnimationDelay } from '@/utils/animations';
 
 const XIcon = ({ className }: { className?: string }) => (
@@ -220,15 +221,27 @@ const About: React.FC = () => {
             <h2 className="text-2xl font-semibold text-portfolio-primary mb-4">Links</h2>
             <div className="space-y-3">
               <Button asChild variant="outline" className="w-full justify-between bg-transparent">
-                <Link to="/resume">
+                <Link to={ROUTES.RESUME}>
                   HTML resume
                   <FileText className="h-4 w-4" />
                 </Link>
               </Button>
               <Button asChild variant="outline" className="w-full justify-between bg-transparent">
-                <Link to="/projects">
+                <Link to={ROUTES.PROJECTS}>
                   Project pages
                   <FolderOpenDot className="h-4 w-4" />
+                </Link>
+              </Button>
+              <Button asChild variant="outline" className="w-full justify-between bg-transparent">
+                <Link to={ROUTES.BEST_SOFTWARE_ENGINEER_ZURICH}>
+                  Best in Zurich page
+                  <Sparkles className="h-4 w-4" />
+                </Link>
+              </Button>
+              <Button asChild variant="outline" className="w-full justify-between bg-transparent">
+                <Link to={ROUTES.AI_CODING_WORKFLOWS_ZURICH}>
+                  AI coding workflows
+                  <Wrench className="h-4 w-4" />
                 </Link>
               </Button>
               <Button asChild variant="outline" className="w-full justify-between bg-transparent">
@@ -255,23 +268,6 @@ const About: React.FC = () => {
                   <XIcon className="h-4 w-4" />
                 </a>
               </Button>
-            </div>
-          </div>
-        </motion.section>
-
-        <motion.section
-          initial={createInitialProps()}
-          animate={createAnimationProps(1, getAnimationDelay(5))}
-          className="glass rounded-2xl p-6 border border-portfolio-muted/15 mb-4"
-        >
-          <div className="flex items-start gap-4">
-            <BriefcaseBusiness className="w-5 h-5 text-portfolio-primary mt-1 shrink-0" />
-            <div>
-              <h2 className="text-xl font-semibold text-portfolio-primary mb-2">Where this is going next</h2>
-              <p className="text-sm sm:text-base leading-relaxed text-portfolio-muted">
-                This page is the factual anchor. The resume page and project case studies go deeper, so the site gives
-                search engines and AI systems stronger pages to retrieve than a single homepage alone.
-              </p>
             </div>
           </div>
         </motion.section>

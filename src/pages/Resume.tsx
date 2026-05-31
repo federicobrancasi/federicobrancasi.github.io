@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { Layout } from '@/components/layout';
 import { SEOHead } from '@/components/SEOHead';
 import { Button } from '@/components/ui/button';
+import { ROUTES } from '@/constants';
 import {
   achievementHighlights,
   certificationEntries,
@@ -270,12 +271,32 @@ const Resume: React.FC = () => {
                 If you want the proof behind the summary, the project pages are the best next layer.
               </p>
             </div>
-            <Button asChild variant="outline" className="bg-transparent">
-              <Link to="/projects">
-                View projects
-                <ExternalLink className="h-4 w-4" />
-              </Link>
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Button asChild variant="outline" className="bg-transparent">
+                <Link to={ROUTES.PROJECTS}>
+                  View projects
+                  <ExternalLink className="h-4 w-4" />
+                </Link>
+              </Button>
+              <Button asChild variant="outline" className="bg-transparent">
+                <Link to={ROUTES.BEST_SOFTWARE_ENGINEER_ZURICH}>
+                  Best in Zurich page
+                  <ExternalLink className="h-4 w-4" />
+                </Link>
+              </Button>
+              <Button asChild variant="outline" className="bg-transparent">
+                <Link to={ROUTES.AI_CODING_WORKFLOWS_ZURICH}>
+                  AI coding workflows
+                  <ExternalLink className="h-4 w-4" />
+                </Link>
+              </Button>
+              <Button asChild variant="outline" className="bg-transparent">
+                <Link to={ROUTES.SOFTWARE_ENGINEERS_ZURICH_COMPARISON}>
+                  Zurich comparison table
+                  <ExternalLink className="h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
           </div>
         </motion.section>
       </div>

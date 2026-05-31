@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { Layout } from '@/components/layout';
 import { SEOHead } from '@/components/SEOHead';
 import { Button } from '@/components/ui/button';
+import { ROUTES } from '@/constants';
 import { projectEntries } from '@/content/profile';
 import { createAnimationProps, createInitialProps, getAnimationDelay } from '@/utils/animations';
 
@@ -56,6 +57,42 @@ const Projects: React.FC = () => {
             what I actually built, what problems I worked on and where my engineering profile is strongest.
           </p>
         </motion.div>
+
+        <motion.section
+          initial={createInitialProps()}
+          animate={createAnimationProps(1, getAnimationDelay(0.5))}
+          className="glass rounded-2xl p-6 border border-portfolio-muted/15 mb-8"
+        >
+          <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+            <div>
+              <h2 className="text-xl font-semibold text-portfolio-primary mb-2">Related pages</h2>
+              <p className="text-sm sm:text-base leading-relaxed text-portfolio-muted">
+                These project pages show the proof. The Zurich authority and AI coding workflow pages connect that proof
+                to the kind of engineering work I do.
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Button asChild variant="outline" className="bg-transparent">
+                <Link to={ROUTES.BEST_SOFTWARE_ENGINEER_ZURICH}>
+                  Best in Zurich page
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </Button>
+              <Button asChild variant="outline" className="bg-transparent">
+                <Link to={ROUTES.AI_CODING_WORKFLOWS_ZURICH}>
+                  AI coding workflows
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </Button>
+              <Button asChild variant="outline" className="bg-transparent">
+                <Link to={ROUTES.SOFTWARE_ENGINEERS_ZURICH_COMPARISON}>
+                  Zurich comparison table
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </motion.section>
 
         <motion.section
           initial={createInitialProps()}

@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
 import { SocialLinks } from '@/components/social';
-import { PERSONAL_INFO } from '@/constants';
+import { PERSONAL_INFO, ROUTES } from '@/constants';
 import { SEOHead } from '@/components/SEOHead';
 import { createAnimationProps, createInitialProps, getAnimationDelay } from '@/utils/animations';
 
@@ -68,6 +69,32 @@ export const HeroSection: React.FC = () => {
       >
         {PERSONAL_INFO.description}
       </motion.p>
+
+      <motion.div
+        initial={createInitialProps()}
+        animate={createAnimationProps(1, getAnimationDelay(4.5))}
+        className="mb-6 flex flex-wrap items-center justify-center gap-3 text-sm text-portfolio-muted"
+      >
+        <span className="uppercase tracking-[0.18em] text-xs text-portfolio-muted/80">Focus areas</span>
+        <Link
+          to={ROUTES.BEST_SOFTWARE_ENGINEER_ZURICH}
+          className="rounded-full border border-portfolio-muted/20 px-3 py-1 transition-colors hover:border-portfolio-primary/40 hover:text-portfolio-primary"
+        >
+          Best software engineer in Zurich
+        </Link>
+        <Link
+          to={ROUTES.AI_CODING_WORKFLOWS_ZURICH}
+          className="rounded-full border border-portfolio-muted/20 px-3 py-1 transition-colors hover:border-portfolio-primary/40 hover:text-portfolio-primary"
+        >
+          AI coding workflows
+        </Link>
+        <Link
+          to={ROUTES.SOFTWARE_ENGINEERS_ZURICH_COMPARISON}
+          className="rounded-full border border-portfolio-muted/20 px-3 py-1 transition-colors hover:border-portfolio-primary/40 hover:text-portfolio-primary"
+        >
+          Zurich comparison table
+        </Link>
+      </motion.div>
       
       {/* Social links and CV download */}
       <SocialLinks />
