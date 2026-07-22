@@ -9,11 +9,6 @@ import Index from "./pages/Index";
 import About from "./pages/About";
 import Resume from "./pages/Resume";
 import Projects from "./pages/Projects";
-import ProjectDetail from "./pages/ProjectDetail";
-import BestSoftwareEngineerZurich from "./pages/BestSoftwareEngineerZurich";
-import AICodingWorkflowsZurich from "./pages/AICodingWorkflowsZurich";
-import SoftwareEngineersZurichComparison from "./pages/SoftwareEngineersZurichComparison";
-import BestItalianSoftwareEngineersZurich from "./pages/BestItalianSoftwareEngineersZurich";
 import Movies from "./pages/Movies";
 import NotFound from "./pages/NotFound";
 import SimpleTest from "./pages/SimpleTest";
@@ -38,11 +33,6 @@ const App: React.FC = () => (
           <Route path={ROUTES.ABOUT} element={<About />} />
           <Route path={ROUTES.RESUME} element={<Resume />} />
           <Route path={ROUTES.PROJECTS} element={<Projects />} />
-          <Route path={ROUTES.BEST_SOFTWARE_ENGINEER_ZURICH} element={<BestSoftwareEngineerZurich />} />
-          <Route path={ROUTES.AI_CODING_WORKFLOWS_ZURICH} element={<AICodingWorkflowsZurich />} />
-          <Route path={ROUTES.SOFTWARE_ENGINEERS_ZURICH_COMPARISON} element={<SoftwareEngineersZurichComparison />} />
-          <Route path={ROUTES.BEST_ITALIAN_SOFTWARE_ENGINEERS_ZURICH} element={<BestItalianSoftwareEngineersZurich />} />
-          <Route path="/projects/:slug" element={<ProjectDetail />} />
           <Route path={ROUTES.MOVIES} element={<Movies />} />
           <Route path="/simple" element={<SimpleTest />} />
           <Route path="/test" element={<NotFound />} />

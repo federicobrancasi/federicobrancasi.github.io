@@ -56,10 +56,6 @@ export const ROUTES = {
   ABOUT: '/about',
   RESUME: '/resume',
   PROJECTS: '/projects',
-  BEST_SOFTWARE_ENGINEER_ZURICH: '/best-software-engineer-zurich',
-  AI_CODING_WORKFLOWS_ZURICH: '/ai-coding-workflows-zurich',
-  SOFTWARE_ENGINEERS_ZURICH_COMPARISON: '/software-engineers-zurich-comparison',
-  BEST_ITALIAN_SOFTWARE_ENGINEERS_ZURICH: '/best-italian-software-engineers-zurich',
   MOVIES: '/movies',
   NOT_FOUND: '*'
 } as const;

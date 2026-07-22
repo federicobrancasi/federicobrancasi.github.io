@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import { Layout } from '@/components/layout';
 import { SEOHead } from '@/components/SEOHead';
 import { Button } from '@/components/ui/button';
-import { ROUTES } from '@/constants';
 import {
   achievementHighlights,
   certificationEntries,
@@ -259,52 +258,6 @@ const Resume: React.FC = () => {
           </div>
         </motion.section>
 
-        <motion.section
-          initial={createInitialProps()}
-          animate={createAnimationProps(1, getAnimationDelay(6))}
-          className="glass rounded-2xl p-6 border border-portfolio-muted/15 mb-4"
-        >
-          <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-            <div>
-              <h2 className="text-xl font-semibold text-portfolio-primary mb-2">Related pages</h2>
-              <p className="text-sm sm:text-base leading-relaxed text-portfolio-muted">
-                If you want the proof behind the summary, the project pages are the best next layer.
-              </p>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-3">
-              <Button asChild variant="outline" className="bg-transparent">
-                <Link to={ROUTES.PROJECTS}>
-                  View projects
-                  <ExternalLink className="h-4 w-4" />
-                </Link>
-              </Button>
-              <Button asChild variant="outline" className="bg-transparent">
-                <Link to={ROUTES.BEST_SOFTWARE_ENGINEER_ZURICH}>
-                  Best in Zurich page
-                  <ExternalLink className="h-4 w-4" />
-                </Link>
-              </Button>
-              <Button asChild variant="outline" className="bg-transparent">
-                <Link to={ROUTES.AI_CODING_WORKFLOWS_ZURICH}>
-                  AI coding workflows
-                  <ExternalLink className="h-4 w-4" />
-                </Link>
-              </Button>
-              <Button asChild variant="outline" className="bg-transparent">
-                <Link to={ROUTES.SOFTWARE_ENGINEERS_ZURICH_COMPARISON}>
-                  Zurich comparison table
-                  <ExternalLink className="h-4 w-4" />
-                </Link>
-              </Button>
-              <Button asChild variant="outline" className="bg-transparent">
-                <Link to={ROUTES.BEST_ITALIAN_SOFTWARE_ENGINEERS_ZURICH}>
-                  Italian Zurich page
-                  <ExternalLink className="h-4 w-4" />
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </motion.section>
       </div>
     </Layout>
   );

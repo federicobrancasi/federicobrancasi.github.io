@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { ArrowLeft, BrainCircuit, Download, FileText, FolderOpenDot, Github, Linkedin, Sparkles, Wrench } from 'lucide-react';
+import { ArrowLeft, BrainCircuit, Download, FileText, Github, Linkedin, Sparkles, Wrench } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Layout } from '@/components/layout';
 import { Button } from '@/components/ui/button';
@@ -224,24 +224,6 @@ const About: React.FC = () => {
                 <Link to={ROUTES.RESUME}>
                   HTML resume
                   <FileText className="h-4 w-4" />
-                </Link>
-              </Button>
-              <Button asChild variant="outline" className="w-full justify-between bg-transparent">
-                <Link to={ROUTES.PROJECTS}>
-                  Project pages
-                  <FolderOpenDot className="h-4 w-4" />
-                </Link>
-              </Button>
-              <Button asChild variant="outline" className="w-full justify-between bg-transparent">
-                <Link to={ROUTES.BEST_SOFTWARE_ENGINEER_ZURICH}>
-                  Best in Zurich page
-                  <Sparkles className="h-4 w-4" />
-                </Link>
-              </Button>
-              <Button asChild variant="outline" className="w-full justify-between bg-transparent">
-                <Link to={ROUTES.AI_CODING_WORKFLOWS_ZURICH}>
-                  AI coding workflows
-                  <Wrench className="h-4 w-4" />
                 </Link>
               </Button>
               <Button asChild variant="outline" className="w-full justify-between bg-transparent">
